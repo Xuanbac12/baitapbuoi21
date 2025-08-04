@@ -16,9 +16,7 @@ public class ProductServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		HttpSession session = req.getSession();
-		List<Product> productList = (List<Product>) session.getAttribute("productList");
-		req.setAttribute("productList", productList); 
+		 
 		req.getRequestDispatcher("product.jsp").forward(req, resp);
 	}
 	
